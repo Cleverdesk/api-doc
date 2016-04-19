@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://jsonschema.net",
+  "type": "object",
+  "properties": {
+    "status": {
+      "id": "http://jsonschema.net/status",
+      "type": "integer",
+      "default": 401,
+      "enum": [
+        401
+      ]
+    },
+    "messange": {
+      "id": "http://jsonschema.net/messange",
+      "type": "string",
+      "default": "Unauthorized",
+      "enum": [
+        "Unauthorized",
+        "Wrong Username or Password"
+      ]
+    }
+  },
+  "required": [
+    "status",
+    "messange"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "status": 200,
+  "page": {
+    "code_name": "plugin/test",
+    "display_name": "Test",
+    "home": false,
+    "ui": [
+      {
+        "type": "heading",
+        "attribute": [
+
+        ],
+        "content": "test"
+      }
+    ]
+  }
+}

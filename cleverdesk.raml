@@ -1,0 +1,56 @@
+#%RAML 0.8
+title: Cleverdesk
+baseUri: https://api.cleverdesk.net
+version: v1
+protocols: [ HTTP, HTTPS ]
+securitySchemes:
+  - basic:
+      type: Basic Authentication
+/user:
+  get:
+    description: <Gets Information about Current user>
+    securedBy: [basic]
+    responses:
+      200:
+        body:
+          application/json:
+            schema: !include schema/response/user.json
+            example: !include example/response/user.json
+      401:
+        body:
+          application/json:
+            schema: !include schema/error/401.json
+            example: !include example/error/401.json
+/pages:
+  get:
+    description: <Gets all pages>
+    securedBy: [basic]
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include example/response/pages.json
+      401:
+        body:
+          application/json:
+            schema: !include schema/error/401.json
+            example: !include example/error/401.json
+  /{id}:
+    get:
+      description: <Gets a Page by id>
+      securedBy: [basic]
+      responses:
+        200:
+          body:
+            application/json:
+              example: !include example/response/page.json
+        404:
+          body:
+            application/json:
+              schema: !include schema/error/404.json
+              example: !include example/error/404.json
+        401:
+          body:
+            application/json:
+              schema: !include schema/error/401.json
+              example: !include example/error/401.json

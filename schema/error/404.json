@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://jsonschema.net",
+  "type": "object",
+  "properties": {
+    "status": {
+      "id": "http://jsonschema.net/status",
+      "type": "integer",
+      "default": 404,
+      "enum": [
+        404
+      ]
+    },
+    "messange": {
+      "id": "http://jsonschema.net/messange",
+      "type": "string",
+      "default": "Not Found",
+      "enum": [
+        "Not Found",
+        "Ticket Not Found"
+      ]
+    }
+  },
+  "required": [
+    "status",
+    "messange"
+  ]
+}

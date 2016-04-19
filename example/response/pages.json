@@ -1,0 +1,10 @@
+{
+  "status": 200,
+  "pages": [
+    {
+      "code_name": "plugin/test",
+      "display_name": "Test",
+      "home": false
+    }
+  ]
+}
