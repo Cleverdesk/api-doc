@@ -8,7 +8,7 @@ securitySchemes:
       type: Basic Authentication
 /user:
   get:
-    description: <Gets Information about Current user>
+    description: Gets Information about Current user
     securedBy: [basic]
     responses:
       200:
@@ -21,10 +21,10 @@ securitySchemes:
           application/json:
             schema: !include schema/error/401.json
             example: !include example/error/401.json
-/pages:
+/main/pages:
   get:
-    description: <Gets all pages>
     securedBy: [basic]
+    description: Gets a list of all pages.
     responses:
       200:
         body:
@@ -36,10 +36,14 @@ securitySchemes:
           application/json:
             schema: !include schema/error/401.json
             example: !include example/error/401.json
-  /{id}:
+/{plugin}:
+  get:
+    securedBy: [basic]
+    description: Gets Information about a plugin
+  /page/{pagename}:
     get:
-      description: <Gets a Page by id>
       securedBy: [basic]
+      description: Gets Information about a page
       responses:
         200:
           body:
